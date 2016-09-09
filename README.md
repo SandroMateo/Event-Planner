@@ -11,6 +11,7 @@ This is an event planner that lets the user plan an event using the options give
 ## Specifications
 
 Input Behavior | Input | Output |
+---------------|-------|--------|
 Gets the wanted input variable | "small" | "small" |
 Resets the input variable | "full bar" | "full bar" |
 Checks to see if the user input matches with one of our options | "American" | true |
