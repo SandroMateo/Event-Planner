@@ -32,4 +32,10 @@ public class EventTest {
     Event testEvent = new Event(2, "food", "drink", "entertain");
     assertEquals("entertain", testEvent.getEntertainmentType());
   }
+
+  @Test
+  public void Event_getCost_0() {
+    Event testEvent = new Event(2, "food", "drink", "entertain");
+    assertEquals(0, testEvent.getCost());
+  }
 }

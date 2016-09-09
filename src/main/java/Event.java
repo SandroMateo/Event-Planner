@@ -4,6 +4,7 @@ class Event {
   private String mFoodType;
   private String mDrinkType;
   private String mEntertainmentType;
+  private int mCost;
 
   public Event(int guestNumber, String foodType, String drinkType, String entertainmentType) {
     mGuestNumber = guestNumber;
@@ -26,5 +27,9 @@ class Event {
 
   public String getEntertainmentType() {
     return mEntertainmentType;
+  }
+
+  public int getCost() {
+    return mCost;
   }
 }
