@@ -52,6 +52,26 @@ class Event {
     return mCost;
   }
 
+  public void setFoodCuisine(String foodCuisine) {
+    mFoodCuisine = foodCuisine;
+  }
+
+  public void setMealAmount(String mealAmount) {
+    mMealAmount = mealAmount;
+  }
+
+  public void setMealType(String mealType) {
+    mMealType = mealType;
+  }
+
+  public void setDrinkType(String drinkType) {
+    mDrinkType = drinkType;
+  }
+
+  public void setEntertainmentType(String entertainmentType) {
+    mEntertainmentType = entertainmentType;
+  }
+
   public boolean checkFoodCuisine() {
     for(int i = 0; i < mFoodCuisineArray.length; i++) {
       if(mFoodCuisine.equalsIgnoreCase(mFoodCuisineArray[i])) {

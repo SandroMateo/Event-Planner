@@ -52,6 +52,41 @@ public class EventTest {
   }
 
   @Test
+  public void Event_setFoodCuisine_American() {
+    Event testEvent = new Event(2, "food", "amount", "meal", "drink", "entertain");
+    testEvent.setFoodCuisine("American");
+    assertEquals("American", testEvent.getFoodCuisine());
+  }
+
+  @Test
+  public void Event_setMealAmount_small() {
+    Event testEvent = new Event(2, "food", "amount", "meal", "drink", "entertain");
+    testEvent.setMealAmount("small");
+    assertEquals("small", testEvent.getMealAmount());
+  }
+
+  @Test
+  public void Event_setMealType_vegan() {
+    Event testEvent = new Event(2, "food", "amount", "meal", "drink", "entertain");
+    testEvent.setMealType("vegan");
+    assertEquals("vegan", testEvent.getMealType());
+  }
+
+  @Test
+  public void Event_setDrinkType_Soda_Bar() {
+    Event testEvent = new Event(2, "food", "amount", "meal", "drink", "entertain");
+    testEvent.setDrinkType("Soda Bar");
+    assertEquals("Soda Bar", testEvent.getDrinkType());
+  }
+
+  @Test
+  public void Event_setEntertainmentType_Our_Own_Staff_DJ() {
+    Event testEvent = new Event(2, "food", "amount", "meal", "drink", "entertain");
+    testEvent.setEntertainmentType("Our Own Staff DJ");
+    assertEquals("Our Own Staff DJ", testEvent.getEntertainmentType());
+  }
+
+  @Test
   public void Event_checkFoodCuisine_true() {
     Event testEvent = new Event(2, "American", "Small", "No preference", "Soda Bar", "Our Own Staff DJ");
     assertEquals(true, testEvent.checkFoodCuisine());
