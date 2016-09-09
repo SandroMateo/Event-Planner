@@ -11,5 +11,8 @@ class Event {
     mDrinkType = drinkType;
     mEntertainmentType = entertainmentType;
   }
-  
+
+  public int getGuestNumber() {
+    return mGuestNumber;
+  }
 }
