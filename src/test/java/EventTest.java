@@ -52,6 +52,36 @@ public class EventTest {
   }
 
   @Test
+  public void Event_checkFoodCuisine_true() {
+    Event testEvent = new Event(2, "American", "Small", "No preference", "Soda Bar", "Our Own Staff DJ");
+    assertEquals(true, testEvent.checkFoodCuisine());
+  }
+
+  @Test
+  public void Event_checkMealAmount_true() {
+    Event testEvent = new Event(2, "American", "Small", "No preference", "Soda Bar", "Our Own Staff DJ");
+    assertEquals(true, testEvent.checkMealAmount());
+  }
+
+  @Test
+  public void Event_checkMealType_true() {
+    Event testEvent = new Event(2, "American", "Small", "No preference", "Soda Bar", "Our Own Staff DJ");
+    assertEquals(true, testEvent.checkMealType());
+  }
+
+  @Test
+  public void Event_checkDrinkType_true() {
+    Event testEvent = new Event(2, "American", "Small", "No preference", "Soda Bar", "Our Own Staff DJ");
+    assertEquals(true, testEvent.checkDrinkType());
+  }
+
+  @Test
+  public void Event_checkEntertainmentType_true() {
+    Event testEvent = new Event(2, "American", "Small", "No preference", "Soda Bar", "Our Own Staff DJ");
+    assertEquals(true, testEvent.checkEntertainmentType());
+  }
+
+  @Test
   public void Event_calculateCost_120() {
     Event testEvent = new Event(2, "American", "Small", "No preference", "Soda Bar", "Our Own Staff DJ");
     testEvent.calculateCost();
