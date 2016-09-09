@@ -23,4 +23,8 @@ class Event {
   public String getDrinkType() {
     return mDrinkType;
   }
+
+  public String getEntertainmentType() {
+    return mEntertainmentType;
+  }
 }
