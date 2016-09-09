@@ -1,8 +1,8 @@
 # Event Planner
 
-### Epicodus Java exercise to practice creating classes, methods, and method testing
+#### Epicodus Java exercise to practice creating classes, methods, and method testing
 
-### By Sandro Alvarez
+#### By Sandro Alvarez
 
 ## Description
 
