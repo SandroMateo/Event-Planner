@@ -52,6 +52,10 @@ class Event {
     return mCost;
   }
 
+  public void setGuestNumber(int guestNumber) {
+    mGuestNumber = guestNumber;
+  }
+
   public void setFoodCuisine(String foodCuisine) {
     mFoodCuisine = foodCuisine;
   }

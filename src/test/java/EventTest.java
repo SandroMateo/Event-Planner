@@ -52,6 +52,13 @@ public class EventTest {
   }
 
   @Test
+  public void Event_setGuestNumber_10() {
+    Event testEvent = new Event(2, "food", "amount", "meal", "drink", "entertain");
+    testEvent.setGuestNumber(10);
+    assertEquals(10, testEvent.getGuestNumber());
+  }
+
+  @Test
   public void Event_setFoodCuisine_American() {
     Event testEvent = new Event(2, "food", "amount", "meal", "drink", "entertain");
     testEvent.setFoodCuisine("American");
