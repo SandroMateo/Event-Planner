@@ -1,7 +1,7 @@
 class Event {
 
-  private double mGuestNumber;
-  private float mCost;
+  private int mGuestNumber;
+  private double mCost;
   private String mFoodCuisine;
   private String mMealAmount;
   private String mMealType;
@@ -15,7 +15,7 @@ class Event {
   private String[] mDrinkArray = {"Soda Bar", "Juice Bar", "Soda and Juice Bar", "Assorted Local Beer", "Assorted Beer with Select Cocktails", "Full Bar"};
   private String[] mEntertainmentArray = {"Our Own Staff DJ", "A Local Struggling Comedian", "A Local Struggling Artist", "A Well Known Local Comedian", "A Well Known Local Band", "A Nationally Famous Band or Comedian"};
 
-  public Event(double guestNumber, String foodCuisine, String mealAmount, String mealType, String drinkType, String entertainmentType) {
+  public Event(int guestNumber, String foodCuisine, String mealAmount, String mealType, String drinkType, String entertainmentType) {
     mGuestNumber = guestNumber;
     mFoodCuisine = foodCuisine;
     mMealAmount = mealAmount;
@@ -24,7 +24,7 @@ class Event {
     mEntertainmentType = entertainmentType;
   }
 
-  public double getGuestNumber() {
+  public int getGuestNumber() {
     return mGuestNumber;
   }
 
@@ -121,22 +121,35 @@ class Event {
     for (int i = 0; i < mCostArray.length; i++) {
       if(mFoodCuisine.equalsIgnoreCase(mFoodCuisineArray[i])) {
         mCost += mCostArray[i];
+        mFoodCuisine = mFoodCuisineArray[i];
       }
       if(mDrinkType.equalsIgnoreCase(mDrinkArray[i])) {
         mCost += mCostArray[i];
+        mDrinkType = mDrinkArray[i];
       }
       if(mEntertainmentType.equalsIgnoreCase(mEntertainmentArray[i])) {
         mCost += mCostArray[i];
+        mEntertainmentType = mEntertainmentArray[i];
       }
     }
     for(int j = 0; j < mMealCostArray.length; j++) {
       if(mMealAmount.equalsIgnoreCase(mMealAmountArray[j])) {
         mCost *= mMealCostArray[j];
+        mMealAmount = mMealAmountArray[j];
       }
       if(mMealType.equalsIgnoreCase(mMealTypeArray[j])) {
         mCost *= mMealCostArray[j];
+        mMealType = mMealTypeArray[j];
       }
     }
-    mCost *= mGuestNumber;
+    if(mGuestNumber < 10) {
+      mCost *= mGuestNumber;
+    } else if (mGuestNumber >= 10 && mGuestNumber < 100) {
+      mCost *= (mGuestNumber * 0.50);
+    } else if (mGuestNumber >=100 && mGuestNumber < 1000) {
+      mCost *= (mGuestNumber * 0.25);
+    } else {
+      mCost *= (mGuestNumber * 0.125);
+    }
   }
 }

@@ -12,7 +12,7 @@ public class EventTest {
   @Test
   public void Event_getGuestNumber_2() {
     Event testEvent = new Event(2, "food", "amount", "meal", "drink", "entertain");
-    assertEquals(2, testEvent.getGuestNumber(), 1);
+    assertEquals(2, testEvent.getGuestNumber());
   }
 
   @Test

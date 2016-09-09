@@ -7,7 +7,7 @@ public class App {
     System.out.println("Welcome to your Event Planner! Here we give you many options to choose from in order to organize and plan your own event. Let's get Started!");
     System.out.println("First off, how many people will be attending this event?");
     String guestStringNumber = console.readLine();
-    double guestNumber = Double.parseDouble(guestStringNumber);
+    int guestNumber = Integer.parseInt(guestStringNumber);
     System.out.println("Great! Let's talk about food. What food cuisine would you like to be served? Please type one of our options: 'American', 'Mexican', 'Indian', 'Italian', 'Japanese', or 'French'.");
     String foodCuisine = console.readLine();
     System.out.println("Sounds good. What would you like your portion sizes to be? Please type one of our options: 'Small', 'Medium', 'Large', or 'Light Snacks'.");
@@ -56,5 +56,15 @@ public class App {
       plannedEvent.setEntertainmentType(entertainmentType);
     }
 
+    plannedEvent.calculateCost();
+
+    System.out.println("Alright! here is your order:");
+    System.out.println("Guest Number: " + plannedEvent.getGuestNumber());
+    System.out.println("Food Cuisine: " + plannedEvent.getFoodCuisine());
+    System.out.println("Portion Size: " + plannedEvent.getMealAmount());
+    System.out.println("Meal Preference: " + plannedEvent.getMealType());
+    System.out.println("Beverages: " + plannedEvent.getDrinkType());
+    System.out.println("Entertainment: " + plannedEvent.getEntertainmentType());
+    System.out.println("Estimated Cost: $" + plannedEvent.getCost() + "0");
   }
 }
