@@ -91,7 +91,7 @@ public class App {
       while(!planAgain.equalsIgnoreCase("yes") && !planAgain.equalsIgnoreCase("no")) {
         System.out.println("\nWould you like to plan another event? Type 'yes' or 'no'");
         planAgain = console.readLine();
-        if(!planAgain.equalsIgnoreCase("yes")) {
+        if(planAgain.equalsIgnoreCase("no")) {
           planEvent = false;
         }
       }
